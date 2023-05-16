@@ -1,3 +1,7 @@
+<h1>
+Bundle1-2
+</h1>
+
 ```
 $ echo "<html><body><h1>Welcome to the Home Page</h1></body></html>" > home.html
 
@@ -163,4 +167,43 @@ Author: yves173 <ykwizera67@gmail.com>
 Date:   Tue May 16 12:02:09 2023 +0200
 
     add home.html
+```
+
+<h1> 
+Bundle2 -1
+</h1>
+
+```
+$ git checkout -b ft/bundle-2
+
+Switched to a new branch 'ft/bundle-2'
+
+$ echo "<html><body><h1>Our Services</h1></body></html>" > services.html
+
+$ git add services.html 
+
+$ git commit -m "add service.html"
+
+[ft/bundle-2 b61ff94] add service.html
+ 1 file changed, 1 insertion(+)
+ create mode 100644 services.html
+ 
+$ git push -u origin ft/bundle-2 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 874 bytes | 874.00 KiB/s, done.
+Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/yves173/bundle1_2/pull/new/ft/bundle-2
+remote: 
+To https://github.com/yves173/bundle1_2.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+Branch 'ft/bundle-2' set up to track remote branch 'ft/bundle-2' from 'origin'.
 ```
