@@ -350,3 +350,258 @@ To https://github.com/yves173/bundle1_2.git
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ```
+<h1>
+	Bundle3 -1
+</h1>
+
+```
+
+$ git checkout -b ft/team-page
+
+Switched to a new branch 'ft/team-page'
+
+$ git add team.html 
+
+$ git commit -m "updating team.html"
+"
+[ft/team-page 26b6d14] updating team.html
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+$ git push -u origin master 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+
+$ git push -u origin ft/team-page 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 29, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (25/25), 6.21 KiB | 2.07 MiB/s, done.
+Total 25 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/yves173/bundle1_2/pull/new/ft/team-page
+remote: 
+To https://github.com/yves173/bundle1_2.git
+ * [new branch]      ft/team-page -> ft/team-page
+Branch 'ft/team-page' set up to track remote branch 'ft/team-page' from 'origin'.
+
+$ git checkout master 
+
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+$ git checkout -b ft/contact-page
+
+Switched to a new branch 'ft/contact-page'
+
+$ git checkout ft/team-page 
+
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+$ git log
+
+commit 26b6d14ef5871baf5ec2bd00927903b03e3051c8 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Fri May 19 14:38:39 2023 +0200
+
+    updating team.html
+
+commit 14a2862c65c8515380497e68a99257e8d9d2e571 (origin/master, master, ft/contact-page)
+Merge: f98734b 69c527f
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Fri May 19 14:20:13 2023 +0200
+
+    Merge remote-tracking branch 'refs/remotes/origin/master'
+
+commit f98734b03641a8b380a9e53b83a0134a48d0fa47
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Fri May 19 14:18:34 2023 +0200
+
+    service.html v2
+
+commit 69c527f0b9c37626f54a5b78a6f7a0a63cde04d7
+Author: yves173 <59310013+yves173@users.noreply.github.com>
+Date:   Tue May 16 14:39:04 2023 +0200
+
+$ git checkout ft/contact-page 
+
+Switched to branch 'ft/contact-page'
+
+$ git cherry-pick 26b6d14ef5871baf5ec2bd00927903b03e3051c8
+
+[ft/contact-page ad01b9d] updating team.html
+ Date: Fri May 19 14:38:39 2023 +0200
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+$ git add contact.html 
+
+$ git commit -m "add contact.html"
+
+[ft/contact-page 4bd95c2] add contact.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 contact.html
+
+$ git push -u origin ft/contact-page 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 31, done.
+Counting objects: 100% (30/30), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (27/27), 6.40 KiB | 2.13 MiB/s, done.
+Total 27 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/yves173/bundle1_2/pull/new/ft/contact-page
+remote: 
+To https://github.com/yves173/bundle1_2.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+Branch 'ft/contact-page' set up to track remote branch 'ft/contact-page' from 'origin'.
+
+$ git checkout -b ft/faq-page
+
+Switched to a new branch 'ft/faq-page'
+
+$ git add faq.html 
+
+$ git commit -m "add faq.html"
+
+[ft/faq-page 77fdf1c] add faq.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+$ git push -u origin ft/faq-page 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 33, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (29/29), 6.57 KiB | 1.64 MiB/s, done.
+Total 29 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/yves173/bundle1_2/pull/new/ft/faq-page
+remote: 
+To https://github.com/yves173/bundle1_2.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+Branch 'ft/faq-page' set up to track remote branch 'ft/faq-page' from 'origin'.
+
+$ git checkout ft/team-page 
+
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+$ git log
+
+commit 26b6d14ef5871baf5ec2bd00927903b03e3051c8 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Fri May 19 14:38:39 2023 +0200
+
+    updating team.html
+
+commit 14a2862c65c8515380497e68a99257e8d9d2e571 (origin/master, master)
+Merge: f98734b 69c527f
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Fri May 19 14:20:13 2023 +0200
+
+    Merge remote-tracking branch 'refs/remotes/origin/master'
+
+commit f98734b03641a8b380a9e53b83a0134a48d0fa47
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Fri May 19 14:18:34 2023 +0200
+
+    service.html v2
+
+commit 69c527f0b9c37626f54a5b78a6f7a0a63cde04d7
+Author: yves173 <59310013+yves173@users.noreply.github.com>
+Date:   Tue May 16 14:39:04 2023 +0200
+
+$ git revert 26b6d14ef5871baf5ec2bd00927903b03e3051c8
+
+[ft/team-page c46d5f1] Revert "updating team.html"
+ 1 file changed, 1 insertion(+), 10 deletions(-)
+
+$ git push -u origin ft/team-page 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+To https://github.com/yves173/bundle1_2.git
+ ! [rejected]        ft/team-page -> ft/team-page (fetch first)
+error: failed to push some refs to 'https://github.com/yves173/bundle1_2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+$ git pull origin 
+
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 15 (delta 6), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (15/15), 6.59 KiB | 1.32 MiB/s, done.
+From https://github.com/yves173/bundle1_2
+   26b6d14..d412f3c  ft/team-page        -> origin/ft/team-page
+   4bd95c2..ab8f04e  ft/contact-page     -> origin/ft/contact-page
+   d594089..9ad1a7c  ft/service-redesign -> origin/ft/service-redesign
+   14a2862..3ab6129  master              -> origin/master
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+
+$ git merge
+
+Auto-merging team.html
+CONFLICT (content): Merge conflict in team.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git merge
+
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+$ git add .
+
+$ git commit -m "merged update"
+
+[ft/team-page 37e2b9b] merged update
+
+$ git push -u origin ft/team-page 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 601 bytes | 601.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/yves173/bundle1_2.git
+   d412f3c..37e2b9b  ft/team-page -> ft/team-page
+Branch 'ft/team-page' set up to track remote branch 'ft/team-page' from 'origin'.
+
+```
