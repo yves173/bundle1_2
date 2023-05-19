@@ -605,3 +605,130 @@ To https://github.com/yves173/bundle1_2.git
 Branch 'ft/team-page' set up to track remote branch 'ft/team-page' from 'origin'.
 
 ```
+
+<h1>
+	Bundle3 -2
+</h1>
+
+```
+
+$ git checkout ft/faq-page 
+
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+
+$ git checkout -b ft/home-page-redesign
+
+Switched to a new branch 'ft/home-page-redesign'
+
+$ git checkout master
+
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 12 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+$ git add .
+
+$ git commit -m "update and change on main"
+
+[master 0263d61] update and change on main
+ 2 files changed, 24 insertions(+)
+ create mode 100644 contact.html
+ create mode 100644 faq.html
+
+$ git push -u origin master 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+To https://github.com/yves173/bundle1_2.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/yves173/bundle1_2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+$ git pull origin
+
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 2.90 KiB | 1.45 MiB/s, done.
+From https://github.com/yves173/bundle1_2
+   3ab6129..3939fa8  master     -> origin/master
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+
+$ git merge
+
+Merge made by the 'ort' strategy.
+ README.md  | 398 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html |   9 +-
+ home.html  |   9 +-
+ team.html  |  12 ++-
+ 4 files changed, 425 insertions(+), 3 deletions(-)
+
+$ git push -u origin master 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 463 bytes | 463.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/yves173/bundle1_2.git
+   3939fa8..a31b104  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+$ git checkout ft/home-page-redesign
+
+Switched to branch 'ft/home-page-redesign'
+
+$ git rebase master ft/home-page-redesign 
+
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+$ git add home.html 
+
+$ git commit -m "changes on home.html"
+
+[ft/home-page-redesign c66bc2c] changes on home.html
+ 1 file changed, 1 insertion(+)
+
+$ git push -u origin ft/home-page-redesign
+ 
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 24, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 4.20 KiB | 2.10 MiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 4 local objects.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/yves173/bundle1_2/pull/new/ft/home-page-redesign
+remote: 
+To https://github.com/yves173/bundle1_2.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+Branch 'ft/home-page-redesign' set up to track remote branch 'ft/home-page-redesign' from 'origin'.
+
+```
+
