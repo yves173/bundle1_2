@@ -882,3 +882,137 @@ Branch 'ft/squashing' set up to track remote branch 'ft/squashing' from 'origin'
 <br><br>
 <span>To Check my github page Enabled:  <span>
 <a href="https://yves173.github.io/bundle1_2/">Click here</a>
+	
+
+<h1>
+	Bundle5 -2  up to Bundle6 -3
+</h1>
+	
+```
+$ git clone https://github.com/yves173/git-cafe-exercise.git
+
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 100
+Receiving objects: 100% (107/107), 1.95 MiB | 1.15 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+$ cd git-cafe-exercise/
+
+$ git add index.html 
+
+$ git commit -m "Changed the text on the home.html"
+
+[main bbfb117] Changed the text on the home.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git push -u origin main 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yves173/git-cafe-exercise.git
+   d1d3f9c..bbfb117  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+$ git checkout -b exer-1
+
+Switched to a new branch 'exer-1'
+
+$ git add .
+
+$ git commit -m "add menu.html"
+
+[exer-1 2b9beea] add menu.html
+ 2 files changed, 37 insertions(+)
+ create mode 100644 .vscode/settings.json
+ create mode 100644 menu.html
+
+$ git push -u origin exer-1 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 647 bytes | 647.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'exer-1' on GitHub by visiting:
+remote:      https://github.com/yves173/git-cafe-exercise/pull/new/exer-1
+remote: 
+To https://github.com/yves173/git-cafe-exercise.git
+ * [new branch]      exer-1 -> exer-1
+Branch 'exer-1' set up to track remote branch 'exer-1' from 'origin'.
+
+$ git checkout -b exer-2
+
+Switched to a new branch 'exer-2'
+
+$ git add index-4.html 
+
+$ git commit -m "changed the title to contact on index4.html"
+
+[exer-2 ff7e7f0] changed the title to contact on index4.html:
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git push -u origin exer-2
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'exer-2' on GitHub by visiting:
+remote:      https://github.com/yves173/git-cafe-exercise/pull/new/exer-2
+remote: 
+To https://github.com/yves173/git-cafe-exercise.git
+ * [new branch]      exer-2 -> exer-2
+Branch 'exer-2' set up to track remote branch 'exer-2' from 'origin'.
+
+$ git checkout -b exer-3
+
+Switched to a new branch 'exer-3'
+
+$ git add index-4.html 
+
+$ git commit -m "change 4n nbr on index4.html"
+
+[exer-3 376887c] change 4n nbr on index4.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git push -u origin exer-3
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 586 bytes | 586.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'exer-3' on GitHub by visiting:
+remote:      https://github.com/yves173/git-cafe-exercise/pull/new/exer-3
+remote: 
+To https://github.com/yves173/git-cafe-exercise.git
+ * [new branch]      exer-3 -> exer-3
+Branch 'exer-3' set up to track remote branch 'exer-3' from 'origin'.
+
+```
