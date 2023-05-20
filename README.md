@@ -732,3 +732,55 @@ Branch 'ft/home-page-redesign' set up to track remote branch 'ft/home-page-redes
 
 ```
 
+<h1>
+	Bundle4 -1
+</h1>
+
+```
+
+$ git checkout master 
+
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+$ git remote add git-copy https://github.com/yves173/bundle1_2_1.git
+
+$ git add home.html 
+
+$ git commit -m "add some changes on home.html"
+
+[master d192630] add some changes on home.html
+ 1 file changed, 1 insertion(+)
+
+$ git push -u origin master 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 579 bytes | 579.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/yves173/bundle1_2.git
+   7ab203f..5258cee  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+$ git push -u git-copy master 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 87, done.
+Counting objects: 100% (87/87), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (83/83), done.
+Writing objects: 100% (87/87), 20.52 KiB | 1.71 MiB/s, done.
+Total 87 (delta 34), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (34/34), done.
+To https://github.com/yves173/bundle1_2_1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'git-copy'.
+
+```
+
