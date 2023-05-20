@@ -784,3 +784,93 @@ Branch 'master' set up to track remote branch 'master' from 'git-copy'.
 
 ```
 
+<h1>
+	Bundle4 -2
+</h1>
+
+```
+$ git checkout -b ft/footer
+
+Switched to a new branch 'ft/footer'
+
+$ git add .
+
+$ git commit -m "add some changes on home.html"
+
+[ft/footer 5e284e3] add some changes on home.html
+ 1 file changed, 1 insertion(+)
+
+$ git add .
+
+$ git commit -m "new change on home.html"
+
+[ft/footer 36858ed] new change on home.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git push origin ft/footer
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 27, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 3.70 KiB | 1.85 MiB/s, done.
+Total 18 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/yves173/bundle1_2/pull/new/ft/footer
+remote: 
+To https://github.com/yves173/bundle1_2.git
+ * [new branch]      ft/footer -> ft/footer
+
+$ git checkout master 
+
+Switched to branch 'master'
+Your branch is up to date with 'git-copy/master'.
+
+$ git checkout -b ft/squashing
+
+Switched to a new branch 'ft/squashing'
+
+$ git merge --squash ft/footer
+
+Updating 5258cee..36858ed
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+$ git status
+
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   home.html
+
+$ git commit -m "Footer changes squashing"
+
+[ft/squashing fb3f95c] Footer changes squashing
+ 1 file changed, 1 insertion(+)
+
+$ git push -u origin ft/squashing 
+
+Username for 'https://github.com': yves173
+Password for 'https://yves173@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/yves173/bundle1_2/pull/new/ft/squashing
+remote: 
+To https://github.com/yves173/bundle1_2.git
+ * [new branch]      ft/squashing -> ft/squashing
+Branch 'ft/squashing' set up to track remote branch 'ft/squashing' from 'origin'.
+
+```
